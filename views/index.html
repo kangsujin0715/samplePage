@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <script src="/scripts/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href="/">LOGO</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/product">Product</a></li>
+                <li><a href="/e">Error</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Home</h2>
+        <div class="content">
+            <img src="/images/main.jpg" alt="메인이미지">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nam provident at excepturi
+                expedita hicsint incidunt, ex pariatur magni libero autem explicabo.
+                <br>
+                <br>Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Cumque nam provident at excepturi expedita hic consequuntur quibusdam qui
+                commodi laborum ipsam laudantium sint incidunt, ex pariatur magni libero autem explicabo.Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. Cumque nam provident at excepturi expedita hic consequuntur
+                quibusdam qui commodi laborum ipsam laudantium sint incidunt, ex pariatur magni libero autem explicabo.
+                <br>Cumque nam provident at excepturi expedita ex pariatur magni libero autem explicabo.Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. Cumque nam provident at excepturi expedita hic consequuntur
+                quibusdam qui commodi laborum ipsam laudantium sint incidunt, ex pariatur magni libero autem explicabo.
+                <br>
+                <br>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nam provident at excepturi expedita hic
+                consequuntur quibusdam qui commodi laborum ipsam laudantium sint incidunt, ex pariatur magni libero autem
+                explicabo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nam provident at excepturi
+                expedita hic consequuntur quibusdam qui commodi laborum ipsam laudantium sint incidunt, ex pariatur magni
+                libero autem explicabo.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nam provident at excepturi expedita hic
+                consequuntur quibusdam qui commodi laborum ipsam laudantium sint incidunt, ex pariatur magni libero
+                autem explicabo.
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nam provident at excepturi expedita hic
+                consequuntur quibusdam qui commodi laborum ipsam laudantium sint incidunt, ex pariatur magni libero autem
+                explicabo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nam provident at excepturi
+                expedita hic consequuntur quibusdam qui commodi laborum ipsam laudantium sint incidunt, ex pariatur magni
+                libero autem explicabo.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nam provident at excepturi expedita hic
+                consequuntur quibusdam
+            </p>
+        </div>
+    </section>
+    <div class="popup">
+        <div class="inner">
+            <h3>안녕하세요 환영합니다!</h3>
+            <button class="close">X</button>
+        </div>
+    </div>
+    <script>
+        $('.close').on('click', function () {
+            $('.popup').css({'display' : 'none', 'transitin' : '0.5s'});
+        })
+    </script>
+</body>
+
+</html>

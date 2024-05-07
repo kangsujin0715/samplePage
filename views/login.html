@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <script src="/scripts/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href="/">LOGO</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/product">Product</a></li>
+                <li><a href="/e">Error</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="login">
+        <h2>Login</h2>
+        <form action="">
+            <input type="text" name="" id="user_id" placeholder="아이디">
+            <input type="password" name="" id="user_pw" placeholder="패스워드">
+            <div>
+                <button id="login">로그인</button>
+                <button id="delete">삭제</button>
+            </div>
+        </form>
+    </section>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event)=>{
+            event.preventDefault();
+        })
+
+        const log = document.querySelector('#login');
+        log.addEventListener('click', ()=>{
+            const userId = document.querySelector('#user_id');
+            const userPw = document.querySelector('#user_pw');
+            console.log(userId.value);
+            console.log(userPw.value);
+
+            fetch('http://localhost:4500/login', {
+                method: 'POST', //PUT, DELETE...
+                headers: {'content-type' : 'application/json; utf-8'},
+                body: JSON.stringify({id : userId.value, pw : userPw.value})
+            }).then(res=>res.json())
+            .then(res=>console.log(res)) 
+        });
+        
+        const del = document.querySelector('#delete');
+        del.addEventListener('click', ()=>{
+            const userId = document.querySelector('#user_id');
+            const userPw = document.querySelector('#user_pw');
+            console.log(userId.value);
+            console.log(userPw.value);
+
+            fetch('http://localhost:4500/login', {
+                method: 'DELETE', //PUT, DELETE...
+                headers: {'content-type' : 'application/json; utf-8'},
+                body: JSON.stringify({id : userId.value, pw : userPw.value})
+            }).then(res=>res.json())
+            .then(res=>console.log(res)) 
+        });
+    </script>
+</body>
+</html>
